@@ -25,4 +25,13 @@ public class UsuarioService {
         }
     }
 
+    public Usuario buscarUsuario(String nome) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getNome().equals(nome)) {
+                return usuario;
+            }
+        }
+        return null;
+    }
+
 }

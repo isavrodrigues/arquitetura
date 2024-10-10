@@ -27,4 +27,13 @@ public class LivroService {
             System.out.println("Biblioteca: " + livro.getBiblioteca().getNome());
         }
     }
+    //metodo para buscar um livro pelo nome
+    public Livro buscarLivro(String nome) {
+        for (Livro livro : livros) {
+            if (livro.getNome().equals(nome)) {
+                return livro;
+            }
+        }
+        return null;
+    }
 }
